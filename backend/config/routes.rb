@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # resources :slots, only: [:index, :create, :take]
   resources :coaches, only: [] do
-    resources :slots, only: [:create, :index] do
+    resources :slots, only: [:create, :index, :show] do
       member do
         post 'take'
       end

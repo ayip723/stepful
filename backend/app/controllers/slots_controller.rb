@@ -24,6 +24,11 @@ class SlotsController < ApplicationController
     render json: slots
   end
 
+  def show
+    slot = Slot.find_by(coach_id: params[:coach_id], id: params[:id])
+    render json: slot
+  end
+
   def create
     coach = Coach.find(params[:coach_id])
     slot = coach.slots.create(start_time: slot_params[:start_time])
