@@ -8,3 +8,6 @@ Setting up DB:
 Starting services:
 At root, do
 `yarn start`
+
+Visit:
+`localhost:3001`
